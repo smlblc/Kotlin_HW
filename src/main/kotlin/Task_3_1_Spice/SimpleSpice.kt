@@ -4,7 +4,8 @@ class SimpleSpice() {
 
     val spiceName: String = "Curry"
     var spiceLevel: String = "mild"
-    var heat :Int = 0
-        get() { return 5 }
+    var heat :Int = -1
+        get() { return if (spiceLevel == "mild") 5 else -1 }
+
 
 }
