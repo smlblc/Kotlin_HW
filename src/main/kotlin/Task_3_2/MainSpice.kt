@@ -26,16 +26,11 @@ fun main() {
 
     val spicesNotDangerous: List<Spice> = spiceList.filterNot { spice -> spice.heat >= 5 }
 
-    println("All the spices: " )
+    println("All the spices: ")
     spiceList.forEach { println("{ ${it.name} | ${it.spiceness} | ${it.heat} }") }
 
     println("Spices are not Dangerous")
     spicesNotDangerous.forEach { println("{ ${it.name} | ${it.spiceness} | ${it.heat} }") }
 
-
-
 }
 
-class Merhaba (){
-
-}
