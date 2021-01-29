@@ -1,6 +1,8 @@
 package Task_3_4
 
-abstract class Spice(val name: String, val spiceness: String = "Mild", val spiceColor: SpiceColor = YellowSpiceColor) :
+import Task_3_5_and_Task_3_6.Color
+
+sealed class Spice(val name: String, val spiceness: String = "Mild", val spiceColor: SpiceColor = YellowSpiceColor) :
     SpiceColor by YellowSpiceColor {
 
     val heat: Int
@@ -52,10 +54,10 @@ fun main() {
 //Delegation (Optional)
 
 interface SpiceColor {
-    var color: String
+    var color: Color
 }
 
 object YellowSpiceColor : SpiceColor {
-    override var color: String = "Yellow"
+    override var color: Color = Color.YELLOW
 
 }
